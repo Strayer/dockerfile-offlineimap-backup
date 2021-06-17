@@ -1,0 +1,20 @@
+[general]
+accounts = main
+metadata = /data/metadata
+pythonfile = /offlineimap.py
+
+[Account main]
+localrepository = main-local
+remoterepository = main-remote
+
+[Repository main-local]
+type = Maildir
+localfolders = /data/maildir
+
+[Repository main-remote]
+type = IMAP
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remotehosteval = getenv("REMOTEHOST")
+remoteporteval = getenv("REMOTEPORT")
+remoteusereval = getenv("REMOTEUSER")
+remotepasseval = getenv("REMOTEPASS")

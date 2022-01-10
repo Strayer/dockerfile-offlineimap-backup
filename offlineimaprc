@@ -18,3 +18,4 @@ remotehosteval = getenv("REMOTEHOST")
 remoteporteval = getenv("REMOTEPORT")
 remoteusereval = getenv("REMOTEUSER")
 remotepasseval = getenv("REMOTEPASS")
+readonly = true
